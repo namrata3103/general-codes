@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[20], i, max,min,size;
+	max = INT_MIN;
+	min = INT_MAX;
+	cout << "Enter array size: ";
+	cin >> size;
+	cout << "enter elements: "<<endl;
+	for (i = 0; i < size; i++)
+	{
+		cin >> arr[i];
+	}
+	//To find max or min element
+	for (i = 0; i < size; i++)
+	{
+		// To get max element
+		if (arr[i] > max)
+		{
+			max = arr[i];
+		}
+
+		// To get min element
+		if (arr[i] < min)
+		{
+			min = arr[i];
+		}
+	}
+	cout << "The max element is: " << max<<endl;
+	cout << "The min element is: " << min;
+
+}
