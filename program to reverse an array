@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[20], size,i,n,temp;
+	cout << "Enter array size: ";
+	cin >> size;
+	cout << "enter elements of array: " << endl;
+
+	// loop to input array elements
+	for (i = 0; i < size;i++)
+	{
+		cin >> arr[i];
+	}
+
+	// To check if size is even or odd
+	if (size % 2 == 0)
+		n = size / 2;
+	else
+		n = (size / 2) + 1;
+
+	// loop to reverse the array
+
+	for (i = 0; i <n; i++)
+		// loops runs till middle of the array
+	{
+		temp = arr[i];                   // stores the value of arr[i] temporarily
+		arr[i] = arr[n - i + 1];     // swaps value with last elements
+		arr[n - i + 1] = temp;      // swaps value with temp
+	}
+
+	// loop to print the reversed array
+
+	for (i = 0; i < size; i++)
+	{
+		cout << arr[i]<< " ";
+	}
+}
