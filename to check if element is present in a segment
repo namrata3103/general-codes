@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int size, key, total, i, j, arr[50] , n = 0, c = 0;
+	cout << "enter size: ";
+	cin >> total;
+	cout << endl;
+	cout << "enter elements:" << endl;
+	for (i = 0; i < total; i++)
+	{
+		cin >> arr[i];
+	}
+	cout << "enter collection size: ";
+	cin >> size;
+	cout << endl;
+	cout << "enter key: ";
+	cin >> key; 
+	for (i = 0; i < total; i=i + size)
+	{
+		for (j = i; j < (i + size); j++)
+		{
+			if (arr[j] == key) {
+				n = 1;
+				break;
+			}
+			else
+			{
+				n = 0;
+			}
+		}
+		if (n == 1)
+		{
+			c = 1;
+		}
+		else
+		{
+			c = 0;
+			break;
+		}
+	}
+	 if (c==1)
+	{
+			cout << "yes, element is present";
+		} 
+	else
+	{
+		cout << "no, element is not present";
+	}
+}
