@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, max, min, arr[20], range,  size;
+	float coeff,num1,num2;
+	cout << "Enter array size: ";
+	cin >> size;
+	cout <<endl<< "enter array elements: "<<endl;
+	for (i = 0; i < size; i++)
+	{
+		cin >> arr[i];
+	}
+
+	// to find max and in element
+
+	min = arr[0];
+	max = arr[0];
+	 
+	for (i = 0; i < size; i++)
+	{
+		if (arr[i] > max)
+		{
+			max = arr[i];
+		}
+		if(arr[i]<min)
+		{
+			min = arr[i];
+		}
+	}
+
+	cout << endl <<"max value is: " << max<<endl;
+	cout << "min value is: " << min;
+	// to find range
+   range = max - min;
+
+   // to find coefficient of range
+   num1 = max - min;            // num1 and num2 are declared float to get coeff as fractional value
+   num2 = max + min;
+   coeff =num1/num2 ;
+
+   cout << endl<< "Range of array is: " << range << endl;
+   cout << "Coefficient of range is: " << coeff;
+}
