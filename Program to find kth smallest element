@@ -1,0 +1,35 @@
+#include<iostream> 
+using namespace std;
+int main()
+{
+	int i, arr[20], size,j,temp,k;
+	cout << "Enter array size: ";
+	cin >> size;
+	cout << "Enter array elements: " << endl;
+	for (i = 0; i < size; i++)
+	{
+		cin >> arr[i];
+	}
+
+	// To sort array
+
+	for (i = size-1; i > 0; i--)
+	{
+		for (j = 0; j < size-1; j++)
+		{
+			if (arr[j + 1] < arr[j])
+			{
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+
+	// To search kth smallest element
+
+	cout << "Enter the value of k: ";
+	cin >> k;
+	cout << endl<<"Kth smallest element is: " << arr[k-1];
+	
+}
