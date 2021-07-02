@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, arr[20],size,x,count=0;
+	cout << "enter array size: ";
+	cin >> size;
+	cout <<endl<< "Enter array elements: " << endl;
+	for (i = 0; i < size; i++)
+	{
+		cin >> arr[i];
+	}
+
+	cout <<endl<< "enter the element whose frequency you want to find: ";
+	cin >> x;
+
+	// to find frequency of elemnt x
+	for (i = 0; i < size; i++)
+	{
+		if (arr[i] == x)
+		{
+			count++;
+		}
+	}
+
+	cout <<endl<< "frequency of element " << x << " is: " << count;
+}
