@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, n, arr[20],sum,j,count=0;
+	cout << "enter size of array: ";
+	cin >> n;
+	cout << "enter array elements:"  << endl;
+	for (i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+	}
+	cout << endl<<"enter value of sum: ";
+	cin >> sum;
+	cout << "pairs are: ";
+	for (i = 0; i < n; i++)
+	{
+		for (j = i; j < n; j++)
+		{
+			if (arr[i] + arr[j] == sum)
+			{
+				count++;
+				cout << " (" << arr[i] << "," << arr[j] <<")"<< " ";
+			}
+		}
+	}
+	cout <<endl<< "Therefore, number of pairs with sum " << sum << " are: " << count;
+	
+
+}
